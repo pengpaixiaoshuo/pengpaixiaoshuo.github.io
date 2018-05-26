@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Centos编译安装ngins,php," />
+  <meta name="keywords" content="鱼," />
 
 
 
@@ -96,18 +96,17 @@
 
 
 
-<meta name="description" content="安装服务器初始时系统级库yum install gccyum install gcc-c++yum install makeyum install cmakeyum install autoconfyum install automakeyum install libtoolyum install re2cyum install flexyum install bison 安装nginx###1：">
-<meta name="keywords" content="Centos编译安装ngins,php">
+<meta name="keywords" content="鱼">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS编译安装nginx、php">
-<meta property="og:url" content="//litten.me/2017/11/03/CentOS编译安装nginx、php/index.html">
+<meta property="og:title" content="鱼缸">
+<meta property="og:url" content="//litten.me/2018/05/26/鱼缸/index.html">
 <meta property="og:site_name" content="彭硕的博客">
-<meta property="og:description" content="安装服务器初始时系统级库yum install gccyum install gcc-c++yum install makeyum install cmakeyum install autoconfyum install automakeyum install libtoolyum install re2cyum install flexyum install bison 安装nginx###1：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-25T15:59:20.628Z">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/7f990c79ly1frp2iiycq6j23342bcb2a.jpg">
+<meta property="og:updated_time" content="2018-05-26T13:41:59.702Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS编译安装nginx、php">
-<meta name="twitter:description" content="安装服务器初始时系统级库yum install gccyum install gcc-c++yum install makeyum install cmakeyum install autoconfyum install automakeyum install libtoolyum install re2cyum install flexyum install bison 安装nginx###1：">
+<meta name="twitter:title" content="鱼缸">
+<meta name="twitter:image" content="http://wx2.sinaimg.cn/mw690/7f990c79ly1frp2iiycq6j23342bcb2a.jpg">
 
 
 
@@ -136,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="//litten.me/2017/11/03/CentOS编译安装nginx、php/"/>
+  <link rel="canonical" href="//litten.me/2018/05/26/鱼缸/"/>
 
 
 
 
 
-  <title>CentOS编译安装nginx、php | 彭硕的博客</title>
+  <title>鱼缸 | 彭硕的博客</title>
   
 
 
@@ -265,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="//litten.me/2017/11/03/CentOS编译安装nginx、php/">
+    <link itemprop="mainEntityOfPage" href="//litten.me/2018/05/26/鱼缸/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="彭硕">
@@ -282,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CentOS编译安装nginx、php</h1>
+          <h1 class="post-title" itemprop="name headline">鱼缸</h1>
         
 
         <div class="post-meta">
@@ -294,8 +293,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-03T22:11:12+08:00">
-                2017-11-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-26T21:38:56+08:00">
+                2018-05-26
               </time>
             
 
@@ -304,28 +303,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -354,12 +331,7 @@
       
 
       
-        <p>安装服务器初始时系统级库<br>yum install gcc<br>yum install gcc-c++<br>yum install make<br>yum install cmake<br>yum install autoconf<br>yum install automake<br>yum install libtool<br>yum install re2c<br>yum install flex<br>yum install bison</p>
-<h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a><strong>安装nginx</strong></h2><p>###<strong>1：安装nginx需要的依赖：</strong><br>rewrite模块需要安装pcre库，yum install pcre pcre-devel<br>gzip模块需要安装zlib库，yum install zlib zlib-devel<br>ssl模块需要安装openssl库，yum install openssl openssl-devel<br>下载源码<br><a href="http://nginx.org/en/download.html" target="_blank" rel="noopener">http://nginx.org/en/download.html</a><br>./configure –prefix=/home/zhangsan/software/nginx –user=zhangsan –group=zhangsan –with-http_ssl_module<br>make<br>make install</p>
-<p>###<strong>2：配置nginx</strong><br>进入nginx配置目录cd /home/zhangsan/software/nginx/conf<br>修改nginx主配置文件加载自建目录下的所有配置文件vim nginx.conf<br>再http括号底部加上include 指定路径/具体文件或<em>;<br>配置文件示例：<br>server {<br>    listen 80;<br>    server_name <a href="http://www.test.com" target="_blank" rel="noopener">www.test.com</a>;<br>    root /home/zhangsan/webroot/zhangsan;<br>    if (!-e $request_filename) {<br>        rewrite ^/(.</em>)$ /index.php last;<br>    }<br>    index index.php index.html index.htm;<br>    location ~ .php$ {<br>        fastcgi_pass 127.0.0.1:9000;<br>        fastcgi_index index.php;<br>        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;<br>        include fastcgi_params;<br>    }<br>}<br>nginx参数优化（todo）<br>http{}内增加 client_max_body_size 8M;<br>启动nginx<br>sudo /home/zhangsan/software/nginx/sbin/nginx<br>重启nginx</p>
-<p>##<strong>安装php</strong></p>
-<p>###<strong>1：安装php需要的依赖：</strong><br>yum install libxml2 libxml2-devel<br>yum install libcurl libcurl-devel<br>yum install libpng libpng-devel<br>yum install libjpeg libjpeg-devel<br>yum install freetype freetype-devel<br>yum install libmcrypt libmcrypt-devel<br>yum install libicu libicu-devel<br>yum install openldap openldap-devel<br>注：安装libmcrypt libmcrypt-devel的时候可能出现找不到的情况，这时候需要添加额外源然后再安装<br>        yum install epel-release<br>        yum update<br>下载源码<br><a href="http://php.net/downloads.php" target="_blank" rel="noopener">http://php.net/downloads.php</a><br>./configure \<br>–prefix=/home/zhangsan/software/php \<br>–with-libdir=lib64 \<br>–enable-fpm \<br>–with-fpm-user=zhangsan \<br>–with-fpm-group=zhangsan \<br>–enable-mysqlnd \<br>–with-mysqli=mysqlnd \<br>–with-pdo-mysql=mysqlnd \<br>–enable-opcache \<br>–enable-pcntl \<br>–enable-mbstring \<br>–enable-sockets \<br>–enable-soap \<br>–enable-zip \<br>–enable-calendar \<br>–enable-bcmath \<br>–enable-intl \<br>–with-openssl \<br>–with-zlib \<br>–with-curl \<br>–with-gd \<br>–with-zlib-dir=/usr/lib64 \<br>–with-png-dir=/usr/lib64 \<br>–with-jpeg-dir=/usr/lib64 \<br>–with-gettext \<br>–with-xmlrpc \<br>–with-mhash \<br>–with-mcrypt \<br>–with-ldap<br>make<br>make install<br>cp php.ini-production /home/zhangsan/software/php/lib/php.ini<br>配置php-fpm<br>进到/home/zhangsan/software/php/etc<br>cp php-fpm.conf.default php-fpm.conf 复制所需的配置文件<br>进到/home/zhangsan/software/php/etc/php-fpm.d<br>cp <a href="http://www.conf.default" target="_blank" rel="noopener">www.conf.default</a> <a href="http://www.conf" target="_blank" rel="noopener">www.conf</a>    复制所需的配置文件<br>php参数优化（todo）</p>
-<p>###<strong>2：修改php.ini:</strong><br>cgi.fix_pathinfo=0    //如果文件不存在，则阻止 Nginx 将请求发送到后端的 PHP-FPM 模块， 以避免遭受恶意脚本注入的攻击<br>post_max_size = 8M<br>upload_max_filesize = 6M<br>启动php-fpm<br>sudo /home/zhangsan/software/php/sbin/php-fpm<br>关闭php-fpm<br>kill -INT 端口号<br>重启php-fpm<br>kill -USR2 端口号</p>
+        <p><img src="http://wx2.sinaimg.cn/mw690/7f990c79ly1frp2iiycq6j23342bcb2a.jpg" alt=""></p>
 
       
     </div>
@@ -377,7 +349,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Centos编译安装ngins-php/" rel="tag"># Centos编译安装ngins,php</a>
+            <a href="/tags/鱼/" rel="tag"># 鱼</a>
           
         </div>
       
@@ -390,15 +362,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/05/26/随手拍/" rel="next" title="随手拍">
+                <i class="fa fa-chevron-left"></i> 随手拍
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/26/随手拍/" rel="prev" title="随手拍">
-                随手拍 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -450,17 +422,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -529,22 +492,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装nginx"><span class="nav-number">1.</span> <span class="nav-text">安装nginx</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
